@@ -1,0 +1,113 @@
+/* ************* Global Style ************* */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f1f7f7;
+}
+h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+/* ************* Memory Game ************* */
+#game {
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+    width: 90vw;
+}
+@media (min-width: 764px) {
+    #game {
+        width: 80vw;
+    }
+}
+@media (min-width: 992px) {
+    #game {
+        width: 50vw;
+    }
+}
+#game .alert {
+    padding: 5px 10px;
+    width: 50%;
+    height: 28px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#game .lose {
+    background: #ff9999;
+    color: #ff1a1a;
+}
+#game .win {
+    color: #66cc66;
+    background: #b3e6b3;
+}
+#game .control-game {
+    display: flex;
+    background: #bdd7d8;
+    padding: .875rem;
+}
+#game .control-game .result {
+    background: #fff;
+    margin-right: 20px;
+    width: 103px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#game .control-game .time {
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#game #cards {
+    background: #d5e5e5;
+    position: relative;
+    padding: 2rem;
+}
+#game #cards .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+}
+#game #cards .play-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    border-radius: 2px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transform: translate(-50%,-50%);
+    background-color: #5d6b6b;
+    width: 200px;
+    height: 150px;
+    transition: all .4s ease-in-out;
+}
+#game #cards .hidden {
+    visibility: hidden;
+    z-index: -999;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.container img {
+    width: 100%;
+}
